@@ -14,18 +14,6 @@ class App extends Component {
   }
 
   handleClick(typeOfButton) {
-    // let number;
-    // switch (typeOfButton) {
-    //   case 'increment':
-    //     number = this.state.number + 1;
-    //     break;
-    //   case 'decrement':
-    //     number = this.state.number - 1;
-    //     break;
-    //   case 'reset':
-    //     number = 0;
-    //     break;
-    // }
     const eventTypes = {
       increment: this.state.number + 1,
       decrement: this.state.number - 1,
@@ -37,10 +25,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button onClick={this.handleClick} color='green' name='Increment'/>
-        <Button onClick={this.handleClick} color='red' name='Decrement'/>
-        <Button onClick={this.handleClick} color='yellow' name='Reset'/>
-        <NumberDisplay  number={this.state.number}/>
+          <NumberDisplay number={this.state.number} />
+        <div className="Buttons">
+          <Button onClick={this.handleClick} color='green' name='Increment' />
+          <Button onClick={this.handleClick} color='red' name='Decrement' />
+          <Button onClick={this.handleClick} color='yellow' name='Reset' />
+        </div>
       </div>
     );
   }

@@ -12,7 +12,7 @@ export default class Button extends Component {
     }
     render() {
         return (
-            <SemanticButton onClick={this.handleClick} inverted color={this.props.color}>
+            <SemanticButton onClick={this.handleClick} inverted color={this.props.color} size='massive'>
                 {this.props.name}
             </SemanticButton>
         );
