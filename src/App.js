@@ -8,19 +8,24 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      number: 1
+      number: 0
     }
     this.handleIncrementClick = this.handleIncrementClick.bind(this);
     this.handleDecrementClick = this.handleDecrementClick.bind(this);
+    this.handleResetClick = this.handleResetClick.bind(this); 
   }
 
   handleIncrementClick () {
     const number = this.state.number + 1;
-    this.setState({ number })
+    this.setState({ number });
   }
   handleDecrementClick () {
     const number = this.state.number - 1;
-    this.setState({ number })
+    this.setState({ number });
+  }
+
+  handleResetClick () {
+    this.setState({ number: 0});
   }
 
   render() {
@@ -28,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Button onClick={this.handleIncrementClick} color='green' name='Increment'/>
         <Button onClick={this.handleDecrementClick} color='red' name='Decrement'/>
-        <Button color='yellow' name='Reset'/>
+        <Button onClick={this.handleResetClick} color='yellow' name='Reset'/>
         <NumberDisplay  number={this.state.number}/>
       </div>
     );
