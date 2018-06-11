@@ -27,9 +27,9 @@ class App extends Component {
       <div className="App">
           <NumberDisplay number={this.state.number} />
         <div className="Buttons">
-          <Button onClick={this.handleClick} color='green' name='Increment' />
-          <Button onClick={this.handleClick} color='red' name='Decrement' />
-          <Button onClick={this.handleClick} color='yellow' name='Reset' />
+          <Button handleClick={this.handleClick} color='green' name='Increment' />
+          <Button handleClick={this.handleClick} color='red' name='Decrement' />
+          <Button handleClick={this.handleClick} color='yellow' name='Reset' />
         </div>
       </div>
     );
